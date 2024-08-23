@@ -1,0 +1,480 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+    list-style: none;
+    text-decoration: none;
+    text-transform:capitalize;
+    line-height: 1.4;
+}
+body{
+    font-family: "Merriweather", serif;
+   
+
+}
+:root{
+    --main-color:#FF8A8A;
+    --sub-color:#D2E0FB;
+    --section-color:rgb(248,249,250)
+}
+.container{
+    width:80%;
+    margin: auto;
+ }
+
+/********************************Title********************************/
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   margin-block: 50px;
+
+
+}
+.title p{
+    position: absolute;
+   font-size: 1.875rem;
+
+
+}
+.title h2{
+   font-size: 7.5rem;
+   color: #aaa;
+   opacity: 0.3;
+}
+.title p::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background-color: var(--main-color);
+}
+/********************************Title********************************/
+
+/********************************Navbar********************************/
+.navbar{
+    display: flex;
+   padding: 20px;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.navbar #menu{
+    display: none;
+}
+.navbar label{
+    color: #fff;
+    margin-left:auto ;
+    display: none;
+}
+.navbar .links{
+    margin: auto;
+
+}
+
+.navbar .links ul {
+    display: flex;
+    align-items: center;
+}
+.navbar .links ul a{
+    display: inline-block;
+    padding-inline: 10px;
+    color: #fff;
+
+}
+
+/********************************Navbar********************************/
+/********************************Home********************************/
+#home {
+   
+    text-align: center;
+    background-image:linear-gradient(#000000b0 0% 100%),url('../images/home.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+#home .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 23px;
+
+}
+#home .container .caption{
+    margin: auto 0;
+
+}
+#home .container .caption p{
+    margin-block: 20px;
+}
+#home .container .caption a{
+color: #fff;
+
+border: 1px solid white;
+background-color: transparent;
+border-radius: 50px;
+padding:5px 10px ;
+transition: 1s background-color ease,1s color ease;
+
+}
+
+#home .container .caption a:hover{
+    background-color: var(--sub-color);
+    color: #000;
+}
+#home .container .icon{
+    position: relative;
+    bottom: 30px;
+    animation: move 1s ease infinite;
+
+}
+@keyframes move {
+    0%{
+        bottom: 30px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+    
+}
+/********************************Home********************************/
+/********************************about********************************/
+#about{
+    padding-block: 70px;
+}
+#about .about-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#about .about-area .about-text{
+    width: calc(70% - 30px);
+}
+#about .about-area .about-text p{
+    padding-block: 10px;
+}
+#about .about-area .about-text h3 span{
+    color: var(--main-color);
+}
+#about .about-area .about-info{
+    width: 30%;
+}
+#about .about-area .about-info li span{
+    font-weight: bolder;
+}
+#about .about-area .about-info .list{
+    border-bottom: 1px dashed #aaa;
+    padding-block: 10px;
+}
+#about .about-area .about-info  a{
+    display: inline-block;
+    color :#fff;
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    margin-block: 20px;
+    border-radius: 50px;
+    transition: 1s color ease,1s background-color ease;
+}
+#about .about-area .about-info  a:hover{
+    color: black;
+    background-color: var(--sub-color);
+}
+#about .container .counter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 1.75rem;
+    color: #aaa;
+    row-gap: 30px;
+
+    
+}
+#about .container .counter .item{
+    width: calc((100% - 30px) /4);
+}
+#about .container .counter .item:not(:last-child){
+    padding-inline: 20px;
+    border-right: 1px dashed #aaa;
+}
+
+/********************************about********************************/
+
+/********************************What I Do********************************/
+#what-i-do{
+    padding-block: 70px;
+    background-color: var(--section-color);
+}
+#what-i-do .services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#what-i-do .services .item{
+    width:calc((100% - 30px) /2 );
+    padding-block: 30px;
+    
+}
+#what-i-do .services .item  span{
+    color: var(--main-color);
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+  transition: 1s color ease,1s background-color ease;
+  background-color: #fff;
+  width: 90px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+ 
+  box-shadow: 0 0 5px rgb(0 0 0 /0.5);
+}
+#what-i-do .services .item {
+    display: flex;
+    align-items: flex-start;
+  
+}
+#what-i-do .services .item  span:hover{
+    color: var(--sub-color);
+    background-color: rgba(0, 0, 0, 0.817);
+}
+
+/********************************What I Do********************************/
+/********************************resume********************************/
+#resume {
+    padding-block: 70px;
+}
+#resume .projects{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#resume .projects span{
+    border: 1px solid transparent;
+    background-color: #8EACCD;
+    color: #fff;
+    border-radius: 10px;
+    padding-inline: 5px;
+    margin: 20px;
+    
+}
+#resume .projects h3{
+    color: var(--main-color);
+  margin:20px;
+}
+#resume .projects p{
+    margin: 20px;
+}
+#resume .projects .item{
+    width:calc((100% - 30px) / 2 );
+  
+   box-shadow: 0 0 5px rgb(0 0 0 /0.5);
+   padding: 10px;
+   border-radius: 10px;
+}
+#resume .skills{
+    padding-block: 30px;
+}
+#resume .skills .skill-area{
+    padding-block: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#resume .skills .skill-area .skill {
+    width: calc((100% - 30px) / 2);
+}
+#resume .skills .skill-area .skill .text{
+    display: flex;
+    justify-content: space-between;
+    
+ 
+}
+#resume .skills .skill-area .skill .progress{
+    background-color: #aaa;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+}
+#resume .skills .skill-area .skill .progress .inner-progress{
+    background-color: var(--main-color);
+    width: 30%;
+    height: 5px;
+    border-radius: 10px;
+}
+#resume .skills .btn a{
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #000;
+    transition: 1s color ease,1s background-color ease;
+   
+}
+#resume  .skills .btn{
+    margin-block: 30px;
+    text-align: center;
+}
+#resume .skills .btn a:hover{
+    color: #000;
+    background-color: var(--sub-color);
+}
+/********************************resume********************************/
+/********************************Portfolio********************************/
+#portfolio{
+    padding-block: 70px;
+    background-color: var(--section-color);
+}
+
+#portfolio .portfolio-area .nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+#portfolio .portfolio-area .nav a{
+    color: gray;
+
+}
+#portfolio .portfolio-area .nav  a.active{
+    color: var(--main-color);
+    position: relative;
+
+}
+#portfolio .portfolio-area .nav  a.active::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 1px;
+    width:calc(100% + 20px);
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+}
+#portfolio .gallary{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#portfolio .gallary .col{
+    width: calc((100% - 30px) / 3);
+}
+#portfolio .gallary .col img{
+    width: 100%;
+    transition: 0.5s 0.5s all;
+}
+#portfolio .gallary .col .item{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#portfolio .gallary .col .item .image{
+    position: relative;
+}
+#portfolio .gallary .col .item .image .layer{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   transition: 1s opacity ease;
+    opacity: 0;
+    background-color:rgb(0 0 0 /0.5);
+    color: #fff;
+}
+#portfolio .gallary .col .item .image:hover .layer{
+opacity: 1;
+}
+#portfolio .gallary .col .item .image:hover img{
+    filter: blur(10px);
+    transform: scale(1.3);
+}
+
+/********************************Portfolio********************************/
+/********************************client********************************/
+#client{
+    padding-block: 70px;
+}
+#client .client-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+#client .client-area .item{
+width: calc(((100% - 30px) / 2));
+background-color: var(--section-color);
+padding: 30px;
+box-shadow: 0 0 5px rgb(0 0 0 /0.5);
+border-radius: 5px;
+}
+#client .client-area .item .head{
+    display: flex;
+    align-items: center;
+   
+}
+#client .client-area .item .head .text{
+    padding-inline: 20px;
+    color: #aaa;
+}
+#client .client-area .item .head .text h2{
+    color: var(--main-color);
+
+}
+#client .client-area .item .head .image img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+#client .client-area .item p{
+    padding-block: 30px;
+}
+#client .client-area .item .rate{
+    color: gold;
+}
+#client .bulets {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#client .bulets span{
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    margin: 30px 10px;
+    border-radius: 50%;
+}
+#client .bulets span.active{
+    background-color: var(--main-color);
+    outline: 1px solid var(--main-color);
+    outline-offset: 3px;
+}
+/********************************client********************************/

@@ -1,0 +1,102 @@
+
+/*`xl` applies to large devices (desktops, less than 1200px)*/
+
+@media (max-width: 1199.98px) {
+  
+}
+
+
+/* `lg` applies to medium devices (tablets, less than 992px)*/
+
+@media (max-width: 991.98px) {
+    #about .about-area .about-text,#about .about-area .about-info, #what-i-do .services .item,#resume .projects .item,#resume .skills .skill-area .skill,#portfolio .gallary .col,#client .client-area .item{
+        width: 100%;
+     }
+    
+}
+
+/*`md` applies to small devices (landscape phones, less than 768px)*/
+
+@media (max-width: 767.98px) {
+    .navbar .links ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; 
+    }
+
+    .navbar .links ul a {
+        display: block;
+        
+        padding-block: 10px;
+    }
+
+    .navbar label {
+        display: block;
+        cursor: pointer; 
+    }
+
+   
+    .navbar #menu:checked ~ .links ul {
+        max-height: 300px; 
+    }
+    html{
+        font-size: 13px;
+    }
+    #about .container .counter .item{
+    width: calc((100% - 30px) /2);
+
+    }
+   
+   
+}
+
+/*`sm` applies to x-small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575.98px) {
+    html{
+        font-size: 12px;
+    }
+    .title h2{
+        font-size: 4rem;
+    }
+    #about .container .counter .item{
+        width: 100%;
+    
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
